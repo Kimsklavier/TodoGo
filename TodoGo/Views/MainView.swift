@@ -7,20 +7,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("world! Hello")
+        NavigationStack {
+            LoginView()
         }
-        .font(.title)
-        
-        .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    MainView()
 }
