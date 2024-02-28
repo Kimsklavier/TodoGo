@@ -9,7 +9,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.seongmin.TodoListApp</string>
+	<string>com.seongmin.TodoGo</string>
 	<key>PROJECT_ID</key>
 	<string>fir-test-e534c</string>
 	<key>STORAGE_BUCKET</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:636442336252:ios:28da285642bc49cd877079</string>
+	<string>1:636442336252:ios:d587192b9c66032d877079</string>
 </dict>
 </plist>
