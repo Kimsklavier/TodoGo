@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-
+    
     @StateObject var viewModel = LoginViewViewModel()
     
     var body: some View {
@@ -16,28 +16,25 @@ struct LoginView: View {
             VStack {
                  //Header
                 HeaderView(title: "To Do List", subtitle: "Get Things Done", angle: 15, background: .blue)
-
-                if viewModel.errorMessage.isEmpty {
-                    Text(viewModel.errorMessage)
-                        .foregroundStyle(.red)
-                }
+                
                  // Login Form
                  Form {
+                     if !viewModel.errorMessage.isEmpty {
+                         Text(viewModel.errorMessage)
+                             .foregroundStyle(.red)
+                     }
+                     
                      TextField("Address", text: $viewModel.email)
                          .textFieldStyle(DefaultTextFieldStyle())
                          .autocorrectionDisabled()
 
-                     TextField("Password", text:$viewModel.password)
+                     SecureField("Password", text:$viewModel.password)
                          .textFieldStyle(DefaultTextFieldStyle())
 
-                     TLButton(title:"Login",
-                              background: Color.blue) {
-                         // action: () -> {}랑 똑같음
-                         
-                         // Attempt Login
+                     TLButton(title: "Login", background: Color.blue) {
+                         // 로그인 버튼 클릭 시 viewModel의 login() 함수 호출
                          viewModel.login()
-                     }.padding()
-                     
+                     }
                 } //end of Form
                  .offset(y:-50)
                 
